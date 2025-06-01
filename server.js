@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 // Root POST endpoint for email generation (used by the extension)
-app.post("/email", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const { emailBody, keypoints, tone, length } = req.body;
 
