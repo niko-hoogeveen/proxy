@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res) => {
   try {
     const persona = "professional and helpful";
-    const { emailBody, keypoints, tone, length, persona } = req.body;
+    const { emailBody, keypoints, tone, length } = req.body;
 
     if (!emailBody) {
       return res.status(400).json({ error: "Email body is required" });
