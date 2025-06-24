@@ -27,7 +27,7 @@ app.post("/", async (req, res) => {
     const messages = [
       {
         role: "system",
-        content: `You are an AI assistant specializing in crafting high-quality email responses. Your persona should be ${persona}.`,
+        content: "You are an AI assistant specializing in crafting high-quality email responses. Your persona should be professional and helpful.",
       },
       {
         role: "user",
@@ -56,7 +56,7 @@ ${emailBody}
     - Maintain the specified tone throughout the response.
     - Adhere to the specified length. 'Concise' means a few sentences to a short paragraph. 'Medium' is a few paragraphs. 'Detailed' can be longer.
     - Structure the email for readability using paragraphs and bullet points if appropriate.
-- **Closing:** Include a professional closing, using the name for the sender as ${senderName}.
+- **Closing:** Include a professional closing, using the name for the sender as the team.
 
 ## OUTPUT FORMAT
 Provide only the complete email response, starting after the subject line. Do not include any other explanatory text.
