@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 app.post("/chat", async (req, res) => {
     try {
         const { messages, model = "gpt-4o-mini", temperature = 0.7 } = req.body;
-        if (messages) {
+        if (!messages) {
             return res.status(400).json({ error: "messages is required" });
         }
         const openaiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
